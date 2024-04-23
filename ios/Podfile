@@ -28,10 +28,12 @@ end
 target 'RinkyDink' do
   config = use_native_modules!
 
+  # TODO: might need to lift these two lines up
   use_frameworks! :linkage => :static
   $RNFirebaseAsStaticFramework = true
   
   pod 'FirebaseAnalytics'
+  pod 'FirebaseAuth'
   
   use_react_native!(
     :path => config[:reactNativePath],
